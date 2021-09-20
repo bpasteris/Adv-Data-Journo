@@ -8,7 +8,7 @@
 
 # Your code: dispatch %>% select(CallDateTime) %>% arrange(CallDateTime) and dispatch %>% select(CallDateTime) %>% arrange(desc(CallDateTime))
 
-
+# Shorter code: dispatch %>% summarise(time_frame = range(CallDateTime))
 
 
 # The answer: 6 days, 8/23 to 8/29
@@ -42,12 +42,12 @@
 
 # Question 4:  Which police district had the most traffic stops?
 
-# Your code: dispatch %>% filter(ExtNatureDisplayName == "TRAFFIC") %>% group_by(PolArea) %>% summarise(num = n()) %>% arrange(desc(num))
+# Your code: dispatch %>% filter(ExtNatureDisplayName == "TRAFFIC STOP") %>% group_by(PolArea) %>% summarise(num = n()) %>% arrange(desc(num))
 
 
 
 
-# The answer: 10W
+# The answer: 50E
 
 
 
